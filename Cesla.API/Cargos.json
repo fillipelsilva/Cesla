@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Gerente Administrativo",
+    "Salario": 12000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 2,
+    "Nome": "Assistente Administrativo",
+    "Salario": 3000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 3,
+    "Nome": "Secretária Executiva",
+    "Salario": 5000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 4,
+    "Nome": "Analista Administrativo",
+    "Salario": 6000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 5,
+    "Nome": "Coordenador de Recursos Humanos",
+    "Salario": 7000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 6,
+    "Nome": "Recepcionista",
+    "Salario": 2500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 7,
+    "Nome": "Controlador de Documentos",
+    "Salario": 4000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 8,
+    "Nome": "Supervisor de Escritório",
+    "Salario": 5500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 9,
+    "Nome": "Analista de Compras",
+    "Salario": 6500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 10,
+    "Nome": "Gerente de Facilidades",
+    "Salario": 8000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 11,
+    "Nome": "Analista Financeiro",
+    "Salario": 7500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 12,
+    "Nome": "Assistente de Contabilidade",
+    "Salario": 3500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 13,
+    "Nome": "Analista de Planejamento",
+    "Salario": 7000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 14,
+    "Nome": "Coordenador de Eventos",
+    "Salario": 4500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 15,
+    "Nome": "Analista de Projetos",
+    "Salario": 6500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 16,
+    "Nome": "Especialista em Conformidade",
+    "Salario": 7000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 17,
+    "Nome": "Gerente de Comunicações Internas",
+    "Salario": 7500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 18,
+    "Nome": "Analista de Suprimentos",
+    "Salario": 6000.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 19,
+    "Nome": "Assistente de Logística",
+    "Salario": 3500.00,
+    "DepartamentoId": 1
+  },
+  {
+    "Id": 20,
+    "Nome": "Administrador de Contratos",
+    "Salario": 6500.00,
+    "DepartamentoId": 1
+  }
+]

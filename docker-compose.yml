@@ -1,0 +1,90 @@
+version: '3.4'
+
+services:
+  cesla.api:
+    image: ${DOCKER_REGISTRY-}ceslaapi
+    container_name: cesla.api
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    build:
+      context: .
+      dockerfile: Cesla.API/Dockerfile
+    ports:
+      - 8080:80
+      - 443:443
+    networks:
+      - cesla_net
+  
+  loki:
+    container_name: loki
+    image: grafana/loki:master
+    ports:
+       - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - loki:/loki
+    restart: unless-stopped
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:master
+    volumes:
+      - grafana:/var/lib/grafana
+    environment:
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+  
+  mysql:
+    image: mysql/mysql-server:latest
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=cesla
+      - MYSQL_ROOT_PASSWORD=#MySQLPassword2024
+    ports:
+      - 3305:3306
+    volumes:
+      - mysql-volume:/var/lib/mysql
+
+  eventstore:
+    container_name: eventstore
+    image: eventstore/eventstore:20.6.1-buster-slim
+    ports:
+      - 2113:2113 # HTTP port
+      - 1113:1113 # TCP port
+    environment:
+      - EVENTSTORE_CLUSTER_SIZE=1
+      - EVENTSTORE_RUN_PROJECTIONS=All
+      - EVENTSTORE_START_STANDARD_PROJECTIONS=true
+      - EVENTSTORE_EXT_TCP_PORT=1113
+      - EVENTSTORE_EXT_HTTP_PORT=2113
+      - EVENTSTORE_INSECURE=true
+      - EVENTSTORE_ENABLE_ATOM_PUB_OVER_HTTP=true
+      - EVENTSTORE_ENABLE_EXTERNAL_TCP=true
+    networks:
+      - cesla_net
+    volumes:
+      - type: volume
+        source: eventstore-volume-data
+        target: /var/lib/eventstore
+      - type: volume
+        source: eventstore-volume-logs
+        target: /var/log/eventstore
+
+networks:
+  cesla_net:
+    driver: bridge
+
+volumes:
+    mysql-volume:
+        driver: local
+    grafana: ~
+    loki: ~
+    eventstore-volume-data:
+    eventstore-volume-logs:
