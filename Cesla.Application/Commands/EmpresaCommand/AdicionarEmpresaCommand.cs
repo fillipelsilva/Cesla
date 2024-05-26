@@ -1,4 +1,6 @@
 ﻿using Cesla.Application.Validations.EmpresaValidation;
+using Cesla.Application.ViewModels.EnderecoViewModels;
+using Cesla.Domain.Entities;
 using Core.Messages;
 using System;
 using System.Collections.Generic;
@@ -12,13 +14,13 @@ namespace Cesla.Application.Commands.EmpresaCommand
     {
         public string Nome { get; set; }
         public string Telefone { get; set; }
-        public int EnderecoId { get; set; }
+        public Endereco Endereco { get; set; } = new Endereco();
 
-        public AdicionarEmpresaCommand(string nome, string telefone, int enderecoId)
+        public AdicionarEmpresaCommand(string nome, string telefone, Endereco endereco)
         {
             Nome = nome;
             Telefone = telefone;
-            EnderecoId = enderecoId;
+            Endereco.AdicionarEndereco(endereco.Numero, endereco.Rua, endereco.Cidade, endereco.Estado, endereco.CEP, endereco.Pais);
         }
 
         public override bool EhValido()

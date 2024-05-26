@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Cesla.Application.ViewModels.CargoViewModels
 {
-    public class CargoViewModel
+    public class CargoUpdateViewModel
     {
-        public int Id { get; set; }
         public string Nome { get; set; }
         public decimal Salario { get; set; }
-        public DepartamentoViewModel Departamento { get;set;}
+        public int DepartamentoId { get; set; }
+        public int Id { get; set; }
     }
 }

@@ -11,22 +11,22 @@ using System.Threading.Tasks;
 
 namespace Cesla.Application.Queries.EmpresaQueries
 {
-    public class EmpresaQueries : IEmpresaQueries
+    public class CargoQueries : IEmpresaQueries
     {
         private readonly IEmpresaRepository _empresaRepository;
         private readonly IMapper _mapper;
 
-        public EmpresaQueries(IEmpresaRepository empresaRepository, IMapper mapper)
+        public CargoQueries(IEmpresaRepository empresaRepository, IMapper mapper)
         {
             _empresaRepository = empresaRepository;
             _mapper = mapper;
         }
 
-        public async Task<List<EmpresaViewModel>> ListarEmpresas()
+        public async Task<List<EmpresaQueryResultViewModel>> ListarEmpresas()
         {
-            var lstEmpresas = await _empresaRepository.ObterTodos();
+            var lstEmpresas = await _empresaRepository.ObterPorPredicado(null, c=> c.Endereco);
 
-            var result = _mapper.Map<List<EmpresaViewModel>>(lstEmpresas.OrderBy(e => e.Nome));
+            var result = _mapper.Map<List<EmpresaQueryResultViewModel>>(lstEmpresas.OrderBy(e => e.Nome));
 
             return result;
         }

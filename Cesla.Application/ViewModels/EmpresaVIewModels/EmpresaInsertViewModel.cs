@@ -12,6 +12,6 @@ namespace Cesla.Application.ViewModels.EmpresaVIewModels
     {
         public string Nome { get; set; }
         public string Telefone { get; set; }
-        public EnderecoViewModel Endereco { get; set; }
+        public EnderecoInsertViewModel Endereco { get; set; }
     }
 }

@@ -25,16 +25,22 @@ namespace Cesla.Application.AutoMapper
             //Empresa
             CreateMap<EmpresaInsertViewModel, Empresa>();
             CreateMap<EmpresaUpdateViewModel, Empresa>();
-            CreateMap<EmpresaViewModel, Empresa>();
+            CreateMap<EmpresaQueryResultViewModel, Empresa>();
 
             //Endereco
             CreateMap<EnderecoViewModel, Endereco>();
+            CreateMap<EnderecoInsertViewModel, Endereco>();
+            CreateMap<EnderecoUpdateViewModel, Endereco>();
 
             //Departamento
-            CreateMap<DepartamentoViewModel, Departamento>();
+            CreateMap<DepartamentoQueryResultViewModel, Departamento>();
+            CreateMap<DepartamentoInsertViewModel, Departamento>();
+            CreateMap<DepartamentoUpdateViewModel, Departamento>();
 
             //Cargo
-            CreateMap<CargoViewModel, Cargo>();
+            CreateMap<CargoQueryResultViewModel, Cargo>();
+            CreateMap<CargoInsertViewModel, Cargo>();
+            CreateMap<CargoUpdateViewModel, Cargo>();
         }
     }
 }

@@ -15,6 +15,9 @@ namespace Cesla.Data.Mappings
         {
             builder.HasKey(c => c.Id);
 
+            builder.Property(c => c.Id)
+                  .ValueGeneratedOnAdd();
+
             builder.Property(c => c.CargoId)
                    .HasColumnType("int");
 

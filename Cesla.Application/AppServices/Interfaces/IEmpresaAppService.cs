@@ -9,7 +9,7 @@ namespace Cesla.Application.AppServices.Interfaces
 {
     public interface IEmpresaAppService
     {
-        Task<List<EmpresaViewModel>> ListarEmpresas();
+        Task<List<EmpresaQueryResultViewModel>> ListarEmpresas();
         Task<bool> CadastrarEmpresa(EmpresaInsertViewModel empresaViewModel);
         Task<bool> AtualizarEmpresa(EmpresaUpdateViewModel empresaViewModel);
         Task<bool> DeletarEmpresa(int id);

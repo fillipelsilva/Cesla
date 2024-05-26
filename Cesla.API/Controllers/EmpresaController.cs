@@ -11,7 +11,7 @@ namespace Cesla.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmpresaController : MainController<ColaboradoresController>
+    public class EmpresaController : MainController<EmpresaController>
     {
         private readonly IEmpresaAppService _empresaAppService;
         public EmpresaController(IStringLocalizer<Resource> localizer,

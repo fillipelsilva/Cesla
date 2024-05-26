@@ -13,6 +13,6 @@ namespace Core.Data
         Task<IEnumerable<T>> ObterPorEntidadeRelacionada(string entidade, string entidadeRelacionada, int entidadeRelacionadaId);
         Task<IEnumerable<T>> ObterTodos();
         Task<T> ObterPorId(int id);
-        Task<IEnumerable<T>> ObterPorPredicado(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includes);
+        Task<IEnumerable<T>> ObterPorPredicado(Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[] includes);
     }
 }

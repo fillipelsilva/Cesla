@@ -29,16 +29,25 @@ namespace Cesla.Application.AutoMapper
             //Colaborador
             CreateMap<Empresa, EmpresaInsertViewModel>();
             CreateMap<Empresa, EmpresaUpdateViewModel>();
-            CreateMap<Empresa, EmpresaViewModel>();
+            CreateMap<Empresa, EmpresaQueryResultViewModel>()
+                .ForMember(c => c.Endereco, opt => opt.MapFrom(x => x.Endereco.ToString()));
 
             //Endereco
             CreateMap<Endereco, EnderecoViewModel>();
+            CreateMap<Endereco, EnderecoInsertViewModel>();
+            CreateMap<Endereco, EnderecoUpdateViewModel>();
 
             //Departamento
-            CreateMap<Departamento, DepartamentoViewModel>();
+            CreateMap<Departamento, DepartamentoQueryResultViewModel>()
+                .ForMember(c => c.Empresa, opt => opt.MapFrom(x => x.Empresa.Nome));
+            CreateMap<Departamento, DepartamentoInsertViewModel>();
+            CreateMap<Departamento, DepartamentoUpdateViewModel>();
 
             //Cargo
-            CreateMap<Cargo, CargoViewModel>();
+            CreateMap<Cargo, CargoQueryResultViewModel>()
+                .ForMember(c => c.Departamento, opt => opt.MapFrom(x => x.Departamento.Nome));
+            CreateMap<Cargo, CargoInsertViewModel>();
+            CreateMap<Cargo, CargoUpdateViewModel>(); ;
         }
     }
 }

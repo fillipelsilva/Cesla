@@ -22,12 +22,22 @@ namespace Cesla.Domain.Entities
 
         }
 
-        public Cargo(int id, string nome, decimal salario, int departamentoId)
+        public Cargo(int id, string nome, decimal salario)
         {
             Id = id;
             Nome = nome;
             Salario = salario;
-            DepartamentoId = departamentoId;
+        }
+
+        public void AdicionarDepartamento(Departamento departamento)
+        {
+            Departamento = departamento;
+        }
+
+        public void AtualizarCargo(string nome, decimal salario)
+        {
+            Nome = nome;
+            Salario = salario;
         }
     }
 }

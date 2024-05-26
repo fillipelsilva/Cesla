@@ -20,11 +20,22 @@ namespace Cesla.Domain.Entities
         {
                 
         }
-        public Departamento(int id, string nome, int empresaId)
+        public Departamento(int id, string nome)
         {
             Id = id;
             Nome = nome;
-            EmpresaId = empresaId;
+        }
+
+
+
+        public void AdicionarEmpresa(Empresa empresa)
+        {
+            Empresa = empresa;
+        }
+
+        public void AtualizarEmpresa(string nome)
+        {
+            Nome = nome;
         }
     }
 }

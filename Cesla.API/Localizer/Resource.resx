@@ -138,7 +138,28 @@
   <data name="ColaboradorVazio" xml:space="preserve">
     <value>Colaborador não informado</value>
   </data>
+  <data name="EmpresaAdicionadaSucesso" xml:space="preserve">
+    <value>A Empresa foi adicionada com sucesso</value>
+  </data>
+  <data name="EmpresaAtualizadaSucesso" xml:space="preserve">
+    <value>A Empresa foi atualizada com sucesso</value>
+  </data>
+  <data name="EmpresaExcluidaSucesso" xml:space="preserve">
+    <value>A empresa foi excluída com sucesso</value>
+  </data>
+  <data name="EmpresaIdVazia" xml:space="preserve">
+    <value>O Id da empresa está vazio</value>
+  </data>
+  <data name="EmpresaNaoExiste" xml:space="preserve">
+    <value>A empresa informada não existe</value>
+  </data>
+  <data name="EmpresaVazia" xml:space="preserve">
+    <value>Empresa não informada</value>
+  </data>
   <data name="ListaColaboradoresVazia" xml:space="preserve">
     <value>A listagem de colaboradores está vazia</value>
+  </data>
+  <data name="ListaEmpresasVazia" xml:space="preserve">
+    <value>A listagem de Empresas está vazia</value>
   </data>
 </root>

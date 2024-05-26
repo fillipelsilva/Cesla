@@ -5,6 +5,7 @@ using Core.Data;
 using Core.DomainObjects;
 using Core.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace Cesla.Data.Repositorios
             return (T)await _DbSet.FindAsync(id);
         }
 
-        public async Task<IEnumerable<T>> ObterPorPredicado(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includes)
+        public async Task<IEnumerable<T>> ObterPorPredicado(Expression<Func<T, bool>>? filter, params Expression<Func<T, object>>[] includes)
         {
             var query = _DbSet.AsQueryable();
 
@@ -66,7 +67,6 @@ namespace Cesla.Data.Repositorios
 
         public async Task Adicionar(T entity)
         {
-
             await _DbSet.AddAsync(entity);
             await _context.SaveChangesAsync();
         }

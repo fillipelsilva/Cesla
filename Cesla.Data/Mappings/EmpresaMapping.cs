@@ -15,13 +15,16 @@ namespace Cesla.Data.Mappings
         {
             builder.HasKey(e => e.Id);
 
+            builder.Property(e => e.Id)
+                  .ValueGeneratedOnAdd();
+
             builder.Property(e => e.Nome)
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
             builder.Property(e => e.Telefone)
                 .IsRequired()
-                .HasColumnType("varchar(10)");
+                .HasColumnType("varchar(11)");
 
             builder.HasOne(e => e.Endereco)
                 .WithOne()

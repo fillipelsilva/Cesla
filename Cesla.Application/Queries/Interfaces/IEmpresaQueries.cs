@@ -9,6 +9,6 @@ namespace Cesla.Application.Queries.Interfaces
 {
     public interface IEmpresaQueries
     {
-        Task<List<EmpresaViewModel>> ListarEmpresas();
+        Task<List<EmpresaQueryResultViewModel>> ListarEmpresas();
     }
 }

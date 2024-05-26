@@ -18,12 +18,11 @@ namespace Cesla.Domain.Entities
         public Endereco Endereco { get; set; }
         public List<Departamento> Departamentos { get; set; }
 
-        public Empresa(int id, string nome, string telefone, int enderecoId)
+        public Empresa(int id, string nome, string telefone)
         {
             Id = id;
             Nome = nome;
             Telefone = telefone;
-            EnderecoId = enderecoId;
         }
 
         public Empresa() { }

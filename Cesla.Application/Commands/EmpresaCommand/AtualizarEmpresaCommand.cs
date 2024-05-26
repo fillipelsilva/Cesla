@@ -1,4 +1,5 @@
 ﻿using Cesla.Application.Validations.EmpresaValidation;
+using Cesla.Domain.Entities;
 using Core.Messages;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,17 @@ namespace Cesla.Application.Commands.EmpresaCommand
 {
     public class AtualizarEmpresaCommand : Command
     {
-        public AtualizarEmpresaCommand(int id, string nome, string telefone, int enderecoId)
+        public AtualizarEmpresaCommand(int id, string nome, string telefone, Endereco endereco)
         {
             Nome = nome;
             Telefone = telefone;
-            EnderecoId = enderecoId;
+            Endereco.AtualizarEndereco(endereco.Numero, endereco.Rua, endereco.Cidade, endereco.Estado, endereco.CEP, endereco.Pais);
             Id = id;
         }
 
         public string Nome { get; set; }
         public string Telefone { get; set; }
-        public int EnderecoId { get; set; }
+        public Endereco Endereco { get; set; } = new Endereco();
         public int Id { get; set; }
 
         public override bool EhValido()

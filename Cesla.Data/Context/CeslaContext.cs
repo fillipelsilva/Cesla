@@ -62,26 +62,28 @@ namespace Cesla.Data.Context
             modelBuilder.Ignore<Event>();
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CeslaContext).Assembly);
 
-            string baseDirectory = Environment.CurrentDirectory;
+            if (!Environment.CurrentDirectory.Contains("Tests")) {
+                string baseDirectory = Environment.CurrentDirectory;
 
-            // Combina o diretório base com o nome do arquivo JSON
-            string questoesPath = Path.Combine(baseDirectory, "Cargos.json");
+                // Combina o diretório base com o nome do arquivo JSON
+                string questoesPath = Path.Combine(baseDirectory, "Cargos.json");
 
-            string jsonContent = File.ReadAllText(questoesPath);
+                string jsonContent = File.ReadAllText(questoesPath);
 
-            List<Cargo> cargos = JsonConvert.DeserializeObject<List<Cargo>>(jsonContent);
+                List<Cargo> cargos = JsonConvert.DeserializeObject<List<Cargo>>(jsonContent);
 
-            foreach (var cargo in cargos)
-            {
-                modelBuilder.Entity<Cargo>()
-                .HasData(new
+                foreach (var cargo in cargos)
                 {
-                    cargo.Id,
-                    cargo.Nome,
-                    cargo.Salario,
-                    cargo.DepartamentoId,
-                    DataCadastro = DateTime.Now
-                });
+                    modelBuilder.Entity<Cargo>()
+                    .HasData(new
+                    {
+                        cargo.Id,
+                        cargo.Nome,
+                        cargo.Salario,
+                        cargo.DepartamentoId,
+                        DataCadastro = DateTime.Now
+                    });
+                }
             }
 
             foreach (var relationship in modelBuilder.Model

@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Cesla.Application.ViewModels.DepartamentoViewModels
 {
-    public class DepartamentoViewModel
+    public class DepartamentoQueryResultViewModel
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public EmpresaUpdateViewModel Empresa { get; set; }
+        public string Empresa { get; set; }
     }
 }

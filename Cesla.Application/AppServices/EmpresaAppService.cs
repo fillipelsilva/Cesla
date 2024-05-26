@@ -34,8 +34,9 @@ namespace Cesla.Application.AppServices
             if (empresaViewModel.IsNull()) await this.LancarDomainNotification(_mediatorHandler, "EmpresaVazia", false);
 
             var empresa = _mapper.Map<Empresa>(empresaViewModel);
+            var endereco = _mapper.Map<Endereco>(empresaViewModel.Endereco);
 
-            var command = new AdicionarEmpresaCommand(empresa.Nome, empresa.Telefone, empresa.EnderecoId);
+            var command = new AdicionarEmpresaCommand(empresa.Nome, empresa.Telefone, endereco);
             if (!await _mediatorHandler.EnviarComando(command))
                 return false;
 
@@ -47,8 +48,9 @@ namespace Cesla.Application.AppServices
             if (empresaViewModel.IsNull()) await this.LancarDomainNotification(_mediatorHandler, "EmpresaVazia", false);
 
             var empresa = _mapper.Map<Empresa>(empresaViewModel);
+            var endereco = _mapper.Map<Endereco>(empresaViewModel.Endereco);
 
-            var command = new AtualizarEmpresaCommand(empresa.Id, empresa.Nome, empresa.Telefone, empresa.EnderecoId);
+            var command = new AtualizarEmpresaCommand(empresa.Id, empresa.Nome, empresa.Telefone, endereco);
             if (!await _mediatorHandler.EnviarComando(command))
                 return false;
 
@@ -66,7 +68,7 @@ namespace Cesla.Application.AppServices
             return true;
         }
 
-        public async Task<List<EmpresaViewModel>> ListarEmpresas()
+        public async Task<List<EmpresaQueryResultViewModel>> ListarEmpresas()
         {
             var lstEmpresas = await _empresaQueries.ListarEmpresas();
 

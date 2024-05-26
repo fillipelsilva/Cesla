@@ -29,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Cesla.Application\Cesla.Application.csproj" />
     <ProjectReference Include="..\Cesla.Data\Cesla.Data.csproj" />
+    <ProjectReference Include="..\Cesla.Tests\Cesla.Tests.csproj" />
     <ProjectReference Include="..\EventSourcing\EventSourcing.csproj" />
   </ItemGroup>
 

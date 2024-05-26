@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Cesla.Application.Commands.EmpresaCommand
 {
-    public class EmpresaHandler : IRequestHandler<AdicionarEmpresaCommand, bool>,
+    public class EmpresaCommandHandler : IRequestHandler<AdicionarEmpresaCommand, bool>,
                               IRequestHandler<AtualizarEmpresaCommand, bool>,
                               IRequestHandler<DeletarEmpresaCommand, bool>
     {
@@ -21,7 +21,7 @@ namespace Cesla.Application.Commands.EmpresaCommand
         private readonly ICargoRepository _cargoRepository;
         private readonly IMediatorHandler _mediatorHandler;
 
-        public EmpresaHandler(IEmpresaRepository empresaRepository, IMediatorHandler mediatorHandler, ICargoRepository cargoRepository)
+        public EmpresaCommandHandler(IEmpresaRepository empresaRepository, IMediatorHandler mediatorHandler, ICargoRepository cargoRepository)
         {
             _empresaRepository = empresaRepository;
             _mediatorHandler = mediatorHandler;
@@ -32,7 +32,8 @@ namespace Cesla.Application.Commands.EmpresaCommand
         {
             if (!ValidarComando(request)) return false;
 
-            var empresa = new Empresa(0, request.Nome, request.Telefone, request.EnderecoId);
+            var empresa = new Empresa(0, request.Nome, request.Telefone);
+            empresa.AdicionarEndereco(request.Endereco);
 
             await _empresaRepository.Adicionar(empresa);
 
