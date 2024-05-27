@@ -6,6 +6,7 @@ pool:
 
 variables:
   DOCKER_REGISTRY_SERVICE_CONNECTION: 'CeslaApplication'
+  AZURE_RM_SERVICE_CONNECTION: 'CeslaAzureRM'
   IMAGE_NAME_API: 'ceslaapi'
   CONTAINER_REGISTRY: 'crcesla.azurecr.io'
 
@@ -18,7 +19,7 @@ steps:
   displayName: 'Build Docker images'
   inputs:
     containerregistrytype: 'Azure Container Registry'
-    azureSubscription: $(DOCKER_REGISTRY_SERVICE_CONNECTION)
+    azureSubscriptionEndpoint: $(AZURE_RM_SERVICE_CONNECTION)
     azureContainerRegistry: $(CONTAINER_REGISTRY)
     dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yml'
     action: 'Build services'
@@ -41,7 +42,7 @@ steps:
   displayName: 'Run services'
   inputs:
     containerregistrytype: 'Azure Container Registry'
-    azureSubscription: $(DOCKER_REGISTRY_SERVICE_CONNECTION)
+    azureSubscriptionEndpoint: $(AZURE_RM_SERVICE_CONNECTION)
     azureContainerRegistry: $(CONTAINER_REGISTRY)
     dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yml'
     action: 'Run services'
