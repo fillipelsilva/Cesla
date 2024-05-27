@@ -64,6 +64,14 @@ O banco de dados escolhido foi o MySQL, por ser um banco relacional e garantir o
 Testes:
 O padrão utilizado é pensado nos testes unitários, testes de integração e BDD.
 
+Logging:
+Essa aplicação foi construída com logs gerado pelo serilog e disponibilizado para consulta no container do GrafanaLoki.
+Para visualiza-los, basta: 
+• Iniciar a aplicação e acessa a porta 3000. Ir em Configuration > Data Source > Add Data Source;
+• Selecionar o Loki e configurar a url como http://loki:3100 e salvar;
+• Vá até a opção explore, selecione o Loki na combo;
+• Expanda o log browser, clique no nome da aplicação cesla_api e clique em show logs para exibi-los;
+
 Build e Execução do Projeto:
 Para executar esses projetos você precisa seguir as etapas abaixo:
 
