@@ -48,7 +48,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(626),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1402),
                             DepartamentoId = 1,
                             Nome = "Gerente Administrativo",
                             Salario = 12000.00m
@@ -56,7 +56,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 2,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(673),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1440),
                             DepartamentoId = 1,
                             Nome = "Assistente Administrativo",
                             Salario = 3000.00m
@@ -64,7 +64,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 3,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(730),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1454),
                             DepartamentoId = 1,
                             Nome = "Secret�ria Executiva",
                             Salario = 5000.00m
@@ -72,7 +72,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 4,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(744),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1468),
                             DepartamentoId = 1,
                             Nome = "Analista Administrativo",
                             Salario = 6000.00m
@@ -80,7 +80,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 5,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(758),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1481),
                             DepartamentoId = 1,
                             Nome = "Coordenador de Recursos Humanos",
                             Salario = 7000.00m
@@ -88,7 +88,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 6,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(772),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1496),
                             DepartamentoId = 1,
                             Nome = "Recepcionista",
                             Salario = 2500.00m
@@ -96,7 +96,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 7,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(786),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1510),
                             DepartamentoId = 1,
                             Nome = "Controlador de Documentos",
                             Salario = 4000.00m
@@ -104,7 +104,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 8,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(803),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1523),
                             DepartamentoId = 1,
                             Nome = "Supervisor de Escrit�rio",
                             Salario = 5500.00m
@@ -112,7 +112,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 9,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(818),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1537),
                             DepartamentoId = 1,
                             Nome = "Analista de Compras",
                             Salario = 6500.00m
@@ -120,7 +120,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 10,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(831),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1551),
                             DepartamentoId = 1,
                             Nome = "Gerente de Facilidades",
                             Salario = 8000.00m
@@ -128,7 +128,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 11,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(847),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1565),
                             DepartamentoId = 1,
                             Nome = "Analista Financeiro",
                             Salario = 7500.00m
@@ -136,7 +136,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 12,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(860),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1579),
                             DepartamentoId = 1,
                             Nome = "Assistente de Contabilidade",
                             Salario = 3500.00m
@@ -144,7 +144,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 13,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(875),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1593),
                             DepartamentoId = 1,
                             Nome = "Analista de Planejamento",
                             Salario = 7000.00m
@@ -152,7 +152,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 14,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(888),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1606),
                             DepartamentoId = 1,
                             Nome = "Coordenador de Eventos",
                             Salario = 4500.00m
@@ -160,7 +160,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 15,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(901),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1620),
                             DepartamentoId = 1,
                             Nome = "Analista de Projetos",
                             Salario = 6500.00m
@@ -168,7 +168,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 16,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(914),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1633),
                             DepartamentoId = 1,
                             Nome = "Especialista em Conformidade",
                             Salario = 7000.00m
@@ -176,7 +176,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 17,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(928),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1668),
                             DepartamentoId = 1,
                             Nome = "Gerente de Comunica��es Internas",
                             Salario = 7500.00m
@@ -184,7 +184,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 18,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(943),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1682),
                             DepartamentoId = 1,
                             Nome = "Analista de Suprimentos",
                             Salario = 6000.00m
@@ -192,7 +192,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 19,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(957),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1695),
                             DepartamentoId = 1,
                             Nome = "Assistente de Log�stica",
                             Salario = 3500.00m
@@ -200,7 +200,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 20,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(971),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1709),
                             DepartamentoId = 1,
                             Nome = "Administrador de Contratos",
                             Salario = 6500.00m
@@ -259,7 +259,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 626, DateTimeKind.Local).AddTicks(8778),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 289, DateTimeKind.Local).AddTicks(2248),
                             EmpresaId = 1,
                             Nome = "Administrativo"
                         });
@@ -283,7 +283,7 @@ namespace Cesla.Data.Migrations
 
                     b.Property<string>("Telefone")
                         .IsRequired()
-                        .HasColumnType("varchar(10)");
+                        .HasColumnType("varchar(11)");
 
                     b.HasKey("Id");
 
@@ -296,7 +296,7 @@ namespace Cesla.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 626, DateTimeKind.Local).AddTicks(8749),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 289, DateTimeKind.Local).AddTicks(2219),
                             EnderecoId = 1,
                             Nome = "Cesla",
                             Telefone = "1101234567"
@@ -351,7 +351,7 @@ namespace Cesla.Data.Migrations
                             Id = 1,
                             CEP = "21345678",
                             Cidade = "Rio de Janeiro",
-                            DataCadastro = new DateTime(2024, 5, 25, 14, 46, 15, 626, DateTimeKind.Local).AddTicks(8670),
+                            DataCadastro = new DateTime(2024, 5, 26, 17, 37, 23, 289, DateTimeKind.Local).AddTicks(2152),
                             Estado = "RJ",
                             Numero = 20,
                             Pais = "Brasil",

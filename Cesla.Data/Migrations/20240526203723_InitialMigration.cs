@@ -44,7 +44,7 @@ namespace Cesla.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Telefone = table.Column<string>(type: "varchar(10)", nullable: false),
+                    Telefone = table.Column<string>(type: "varchar(11)", nullable: false),
                     EnderecoId = table.Column<int>(type: "int", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime(6)", nullable: true)
                 },
@@ -127,43 +127,43 @@ namespace Cesla.Data.Migrations
             migrationBuilder.InsertData(
                 table: "endereco_tb",
                 columns: new[] { "Id", "CEP", "Cidade", "DataCadastro", "Estado", "Numero", "Pais", "Rua" },
-                values: new object[] { 1, "21345678", "Rio de Janeiro", new DateTime(2024, 5, 25, 14, 46, 15, 626, DateTimeKind.Local).AddTicks(8670), "RJ", 20, "Brasil", "Rua Teste" });
+                values: new object[] { 1, "21345678", "Rio de Janeiro", new DateTime(2024, 5, 26, 17, 37, 23, 289, DateTimeKind.Local).AddTicks(2152), "RJ", 20, "Brasil", "Rua Teste" });
 
             migrationBuilder.InsertData(
                 table: "empresa_tb",
                 columns: new[] { "Id", "DataCadastro", "EnderecoId", "Nome", "Telefone" },
-                values: new object[] { 1, new DateTime(2024, 5, 25, 14, 46, 15, 626, DateTimeKind.Local).AddTicks(8749), 1, "Cesla", "1101234567" });
+                values: new object[] { 1, new DateTime(2024, 5, 26, 17, 37, 23, 289, DateTimeKind.Local).AddTicks(2219), 1, "Cesla", "1101234567" });
 
             migrationBuilder.InsertData(
                 table: "departamento_tb",
                 columns: new[] { "Id", "DataCadastro", "EmpresaId", "Nome" },
-                values: new object[] { 1, new DateTime(2024, 5, 25, 14, 46, 15, 626, DateTimeKind.Local).AddTicks(8778), 1, "Administrativo" });
+                values: new object[] { 1, new DateTime(2024, 5, 26, 17, 37, 23, 289, DateTimeKind.Local).AddTicks(2248), 1, "Administrativo" });
 
             migrationBuilder.InsertData(
                 table: "cargo_tb",
                 columns: new[] { "Id", "DataCadastro", "DepartamentoId", "Nome", "Salario" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(626), 1, "Gerente Administrativo", 12000.00m },
-                    { 2, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(673), 1, "Assistente Administrativo", 3000.00m },
-                    { 3, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(730), 1, "Secret�ria Executiva", 5000.00m },
-                    { 4, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(744), 1, "Analista Administrativo", 6000.00m },
-                    { 5, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(758), 1, "Coordenador de Recursos Humanos", 7000.00m },
-                    { 6, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(772), 1, "Recepcionista", 2500.00m },
-                    { 7, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(786), 1, "Controlador de Documentos", 4000.00m },
-                    { 8, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(803), 1, "Supervisor de Escrit�rio", 5500.00m },
-                    { 9, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(818), 1, "Analista de Compras", 6500.00m },
-                    { 10, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(831), 1, "Gerente de Facilidades", 8000.00m },
-                    { 11, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(847), 1, "Analista Financeiro", 7500.00m },
-                    { 12, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(860), 1, "Assistente de Contabilidade", 3500.00m },
-                    { 13, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(875), 1, "Analista de Planejamento", 7000.00m },
-                    { 14, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(888), 1, "Coordenador de Eventos", 4500.00m },
-                    { 15, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(901), 1, "Analista de Projetos", 6500.00m },
-                    { 16, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(914), 1, "Especialista em Conformidade", 7000.00m },
-                    { 17, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(928), 1, "Gerente de Comunica��es Internas", 7500.00m },
-                    { 18, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(943), 1, "Analista de Suprimentos", 6000.00m },
-                    { 19, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(957), 1, "Assistente de Log�stica", 3500.00m },
-                    { 20, new DateTime(2024, 5, 25, 14, 46, 15, 629, DateTimeKind.Local).AddTicks(971), 1, "Administrador de Contratos", 6500.00m }
+                    { 1, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1402), 1, "Gerente Administrativo", 12000.00m },
+                    { 2, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1440), 1, "Assistente Administrativo", 3000.00m },
+                    { 3, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1454), 1, "Secret�ria Executiva", 5000.00m },
+                    { 4, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1468), 1, "Analista Administrativo", 6000.00m },
+                    { 5, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1481), 1, "Coordenador de Recursos Humanos", 7000.00m },
+                    { 6, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1496), 1, "Recepcionista", 2500.00m },
+                    { 7, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1510), 1, "Controlador de Documentos", 4000.00m },
+                    { 8, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1523), 1, "Supervisor de Escrit�rio", 5500.00m },
+                    { 9, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1537), 1, "Analista de Compras", 6500.00m },
+                    { 10, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1551), 1, "Gerente de Facilidades", 8000.00m },
+                    { 11, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1565), 1, "Analista Financeiro", 7500.00m },
+                    { 12, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1579), 1, "Assistente de Contabilidade", 3500.00m },
+                    { 13, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1593), 1, "Analista de Planejamento", 7000.00m },
+                    { 14, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1606), 1, "Coordenador de Eventos", 4500.00m },
+                    { 15, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1620), 1, "Analista de Projetos", 6500.00m },
+                    { 16, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1633), 1, "Especialista em Conformidade", 7000.00m },
+                    { 17, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1668), 1, "Gerente de Comunica��es Internas", 7500.00m },
+                    { 18, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1682), 1, "Analista de Suprimentos", 6000.00m },
+                    { 19, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1695), 1, "Assistente de Log�stica", 3500.00m },
+                    { 20, new DateTime(2024, 5, 26, 17, 37, 23, 291, DateTimeKind.Local).AddTicks(1709), 1, "Administrador de Contratos", 6500.00m }
                 });
 
             migrationBuilder.CreateIndex(
