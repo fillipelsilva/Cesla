@@ -1,0 +1,48 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  DOCKER_REGISTRY_SERVICE_CONNECTION: 'CeslaApplication'
+  IMAGE_NAME_API: 'ceslaapi'
+  CONTAINER_REGISTRY: 'crcesla.azurecr.io'
+
+steps:
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: 'latest'
+
+- task: DockerCompose@0
+  displayName: 'Build Docker images'
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: $(DOCKER_REGISTRY_SERVICE_CONNECTION)
+    azureContainerRegistry: $(CONTAINER_REGISTRY)
+    dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yml'
+    action: 'Build services'
+
+- script: docker tag cesla.api $(CONTAINER_REGISTRY)/$(IMAGE_NAME_API):latest
+  displayName: 'Tag cesla.api Image'
+
+- task: Docker@2
+  inputs:
+    command: 'login'
+    containerRegistry: $(DOCKER_REGISTRY_SERVICE_CONNECTION)
+
+- task: Docker@2
+  inputs:
+    command: 'push'
+    repository: $(CONTAINER_REGISTRY)/$(IMAGE_NAME_API)
+    tags: 'latest'
+
+- task: DockerCompose@0
+  displayName: 'Run services'
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: $(DOCKER_REGISTRY_SERVICE_CONNECTION)
+    azureContainerRegistry: $(CONTAINER_REGISTRY)
+    dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yml'
+    action: 'Run services'
+    detached: true
